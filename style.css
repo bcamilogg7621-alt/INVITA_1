@@ -1,0 +1,484 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0eeee;
+    color: #174c3b;
+}
+
+
+.intro {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+
+    background:
+        radial-gradient(circle at top, #d8f5d0, transparent 55%),
+        linear-gradient(135deg, #087f65, #0b493c);
+}
+
+
+.intro-content {
+    max-width: 600px;
+    color: rgb(252, 252, 252);
+    animation: aparecer 1.2s ease;
+}
+
+
+.sun {
+    font-size: 65px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.small-title {
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #fcfcfc;
+}
+
+.intro h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(38px, 7vw, 65px);
+    margin-bottom: 20px;
+}
+
+.intro h3 {
+    font-size: 25px;
+    max-width: 600px;
+    color: #993979;
+}
+
+.intro-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+#startBtn {
+    padding: 16px 32px;
+    border-radius: 40px;
+    background: #f9d65c;
+    color: #174c3b;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0 8px 25px #0003;
+}
+
+#startBtn:hover {
+    transform: translateY(-5px);
+    background: #ffe889;
+}
+
+.intro-date {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #d9f5dc;
+}
+
+
+/* VISIBILIDAD */
+
+.hidden {
+    display: none;
+}
+
+main {
+    animation: aparecer 1s ease;
+}
+
+
+/* PORTADA */
+
+.hero {
+    min-height: 90vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+
+    background:
+        linear-gradient(135deg, #087c62, #0d5145 60%, #143e37);
+    color: white;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "🌴";
+    position: absolute;
+    font-size: 180px;
+    top: 20px;
+    left: -35px;
+    opacity: 0.13;
+    transform: rotate(-20deg);
+}
+
+.hero::after {
+    content: "🌴";
+    position: absolute;
+    font-size: 180px;
+    bottom: 10px;
+    right: -30px;
+    opacity: 0.13;
+    transform: rotate(20deg);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-label {
+    letter-spacing: 4px;
+    font-size: 12px;
+    color: #ffe27c;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(42px, 8vw, 75px);
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: clamp(20px, 4vw, 32px);
+    color: #ffe27c;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    line-height: 1.8;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 30px;
+    border-radius: 30px;
+    background: #f9d65c;
+    color: #174c3b;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+}
+
+
+/* INVITACIÓN */
+
+.invitation {
+    padding: 90px 25px;
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+}
+
+.section-label {
+    color: #e3a92d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.invitation h2 {
+    font-size: clamp(25px, 5vw, 38px);
+    margin-bottom: 25px;
+}
+
+.description {
+    color: #647d71;
+    line-height: 2;
+    font-size: 15px;
+}
+
+
+/* DESTINO */
+
+.destination {
+    padding: 70px 20px;
+    background: #dff3e6;
+    text-align: center;
+}
+
+.destination-card {
+    max-width: 650px;
+    margin: auto;
+    padding: 45px 25px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px #174c3b12;
+}
+
+.destination-icon {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.destination-card h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.destination-card h3 {
+    color: #0d9470;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.destination-card p {
+    color: #71877c;
+    line-height: 1.8;
+}
+
+
+/* FECHA */
+
+.date-section {
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.date-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.date-card {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 35px 25px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px #174c3b12;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.date-number {
+    font-size: 55px;
+    font-weight: 800;
+    color: #0d9470;
+}
+
+.date-info {
+    text-align: left;
+}
+
+.date-info h3 {
+    font-size: 19px;
+}
+
+.date-info p {
+    color: #81968b;
+    font-size: 12px;
+}
+
+.date-divider {
+    height: 65px;
+    width: 2px;
+    background: #dce9df;
+    margin: 0 10px;
+}
+
+.year {
+    margin-top: 20px;
+    color: #81968b;
+    letter-spacing: 5px;
+}
+
+
+/* FINAL */
+
+.final-section {
+    padding: 70px 20px;
+    background: #e4f5e8;
+    text-align: center;
+}
+
+.final-card {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 50px 30px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px #174c3b12;
+}
+
+.final-emoji {
+    font-size: 60px;
+}
+
+.final-card h2 {
+    margin: 20px 0;
+    font-size: 29px;
+}
+
+.final-card p {
+    color: #71877c;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.final-card h3 {
+    color: #0d9470;
+    margin-bottom: 30px;
+}
+
+
+#confirmBtn {
+    background: #0d9470;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+#confirmBtn:hover {
+    background: #087653;
+    transform: translateY(-4px);
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #103e33;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 12px;
+    line-height: 2;
+}
+
+
+/* ANIMACIONES */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .date-card {
+        gap: 12px;
+        padding: 25px 12px;
+    }
+
+    .date-number {
+        font-size: 40px;
+    }
+
+    .date-info h3 {
+        font-size: 15px;
+    }
+
+    .date-info p {
+        font-size: 10px;
+    }
+
+    .date-divider {
+        margin: 0 3px;
+    }
+
+    .final-card {
+        padding: 40px 20px;
+    }
+}
+
+
+.floating-suns {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.floating-suns span {
+    position: absolute;
+    font-size: 25px;
+    animation: flotar 6s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+.floating-suns span:nth-child(1) {
+    left: 10%;
+    top: 20%;
+}
+
+.floating-suns span:nth-child(2) {
+    left: 85%;
+    top: 35%;
+    animation-delay: 1s;
+}
+
+.floating-suns span:nth-child(3) {
+    left: 25%;
+    top: 75%;
+    animation-delay: 2s;
+}
+
+.floating-suns span:nth-child(4) {
+    left: 75%;
+    top: 85%;
+    animation-delay: 3s;
+}
+
+.floating-suns span:nth-child(5) {
+    left: 50%;
+    top: 10%;
+    animation-delay: 4s;
+}
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-25px) rotate(15deg);
+    }
+}
